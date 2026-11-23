@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>No Hello — Tolong Jangan Hanya "Halo" di Chat</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --card: #f9fafb;
+      --bad: #fee2e2;
+      --bad-text: #991b1b;
+      --good: #dcfce7;
+      --good-text: #166534;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 2rem 1.25rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 span {
+      text-decoration: line-through;
+      color: #ef4444;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+
+    .chat-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .badge.bad {
+      background: var(--bad);
+      color: var(--bad-text);
+    }
+
+    .badge.good {
+      background: var(--good);
+      color: var(--good-text);
+    }
+
+    .msg {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.65rem;
+      font-size: 0.95rem;
+    }
+
+    .msg:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .bubble {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.85rem;
+      border-radius: 10px;
+      width: fit-content;
+      max-width: 90%;
+    }
+
+    .msg.me .bubble {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .wait-note {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--muted);
+      margin: 0.4rem 0 0.7rem;
+    }
+
+    .copy-card {
+      background: #f3f4f6;
+      border: 1px dashed #9ca3af;
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9rem;
+      color: #1f2937;
+    }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>no <span>hello</span></h1>
+      <p class="subtitle">Tolong jangan hanya mengirim "Halo" atau "P" di chat tanpa langsung menyampaikan maksudnya.</p>
+    </header>
+
+    <section>
+      <h2>Kenapa ini penting?</h2>
+      <p>
+        Mengirim pesan hanya berisi <strong>"Halo"</strong>, <strong>"Permisi"</strong>, atau <strong>"P"</strong> lalu menunggu balasan membuat lawan bicara harus menebak keperluanmu dan menunda penyelesaian masalah. Di chat asinkron, sapaan dan pertanyaan bisa dikirim dalam satu pesan sekaligus.
+      </p>
+    </section>
+
+    <section>
+      <h2>❌ Contoh yang Kurang Efektif</h2>
+      <div class="chat-box">
+        <span class="badge bad">Jangan Seperti Ini</span>
+        <div class="msg me">
+          <span class="meta">Andi · 09:15</span>
+          <div class="bubble">Halo kak</div>
+        </div>
+        <div class="wait-note">... menunggu 12 menit ...</div>
+        <div class="msg">
+          <span class="meta">Budi · 09:27</span>
+          <div class="bubble">Halo, ada yang bisa dibantu?</div>
+        </div>
+        <div class="wait-note">... menunggu 8 menit lagi ...</div>
+        <div class="msg me">
+          <span class="meta">Andi · 09:35</span>
+          <div class="bubble">Mau tanya stok produk A masih ready?</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>✅ Contoh yang Lebih Efektif</h2>
+      <div class="chat-box">
+        <span class="badge good">Lakukan Seperti Ini</span>
+        <div class="msg me">
+          <span class="meta">Andi · 09:15</span>
+          <div class="bubble">Halo kak! Mau tanya, apakah stok produk A warna hitam masih ready untuk dikirim hari ini?</div>
+        </div>
+        <div class="msg">
+          <span class="meta">Budi · 09:17</span>
+          <div class="bubble">Halo Andi! Masih ready ya, pesanan sebelum jam 15.00 ikut pengiriman hari ini.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pasang di Status atau Bio Kamu</h2>
+      <div class="copy-card">
+        <code id="bioText">Langsung tulis keperluanmu setelah menyapa ya — https://nohello.net/id/</code>
+        <button onclick="copyBio()">Salin Teks</button>
+      </div>
+    </section>
+
+    <footer>
+      Terinspirasi dari etika komunikasi cepat &amp; sopan di era chat modern.
+    </footer>
+  </div>
+
+  <script>
+    function copyBio() {
+      const text = document.getElementById("bioText").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector("button");
+        const original = btn.innerText;
+        btn.innerText = "Tersalin!";
+        setTimeout(() => (btn.innerText = original), 1800);
+      });
+    }
+  </script>
+</body>
+</html>
